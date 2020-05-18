@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -28,4 +29,12 @@ public class ExampleResource {
         lst.add(new Person("Anchu","0815369990","Bangkok"));
         return lst;
     }
+
+    @GET
+    @Path("{name}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String echoParam(@PathParam("name") String name){
+        return "Parameter name = " + name;
+    }
+
 }
