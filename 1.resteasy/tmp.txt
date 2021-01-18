@@ -1,0 +1,9 @@
+mvn clean package -Pnative \
+-Dquarkus.kubernetes-client.trust-certs=true \
+-Dquarkus.native.container-build=true \
+-Dquarkus.kubernetes.deploy=true \
+-Dquarkus.kubernetes.deployment-target=openshift \
+-Dquarkus.openshift.expose=true \
+-Dquarkus.openshift.labels.app.openshift.io/runtime=java
+
+quarkus.native.container-build

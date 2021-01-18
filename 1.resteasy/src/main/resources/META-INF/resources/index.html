@@ -125,6 +125,22 @@
 
         <h2>How do I get rid of this page?</h2>
         <p>Just delete the <code>src/main/resources/META-INF/resources/index.html</code> file.</p>
+
+        <h2>REST APIs</h2>
+        <p><table>
+            <tr><th>Method</th><th>Descrption</th></tr>
+            <tr><td>/hello</td><td>Hello Message</td></tr>
+            <tr><td>/hello/{name}</td><td>Hello {name}</td></tr>
+            <tr><td>/hello/all</td><td>List all names (JSON)</td></tr>
+            <tr><td>/status</td><td>Application's status (JSON)</td></tr>
+            <tr><td>/status/not-ready</td><td>Set Readiness to DOWN</td></tr>
+            <tr><td>/status/ready</td><td>Set Readiness to UP</td></tr>
+            <tr><td>/status/not-live</td><td>Set Liveness to DOWN</td></tr>
+            <tr><td>/status/live</td><td>Set Readiness to UP</td></tr>
+            <tr><td>/health/ready</td><td>Health check for readiness</td></tr>
+            <tr><td>/health/live</td><td>Health check for liveness</td></tr>
+            <tr><td>/metrics</td><td>Application's metrics</td></tr>
+        </table></p>
     </div>
     <div class="right-column">
         <div class="right-section">
