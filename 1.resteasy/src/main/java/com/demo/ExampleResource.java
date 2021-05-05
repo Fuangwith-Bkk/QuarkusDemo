@@ -7,6 +7,7 @@ import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -82,4 +83,10 @@ public class ExampleResource {
         }
     }
 
+    @POST
+    public Response echoPostBody(String body){
+        String message = "POST " + this.hostName + "/hello [Body] >> \n" + body;
+        LOG.info(message);
+        return Response.ok(message).build();
+    }
 }
